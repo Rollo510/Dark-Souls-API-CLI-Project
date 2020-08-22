@@ -1,5 +1,3 @@
-
-
 class GetWeapons
 
     attr_accessor :url, :weapon_info, :name
@@ -17,7 +15,6 @@ class GetWeapons
         uri = URI.parse(URL)
         response = Net::HTTP.get_response(uri)
         response.body
-        # @weapon_info = JSON.parse(response.body)
     end
 
     def find_weapon

@@ -7,7 +7,7 @@ class MainMenu
             display_welcome_message
             input = gets.strip.capitalize
             check_exit?(input)
-            GetWeapons.new(input).find_weapon 
+            GetWeapons.new(input).find_weapon
             list_all_weapons
             invalid_weapon?
             select_weapon(input)
@@ -30,6 +30,7 @@ class MainMenu
                 if check_exit?(input) || input.to_i > 0 && input.to_i <= Weapon.all.length
                     weapon_index = Weapon.all[input.to_i - 1]
                 else
+                    puts ""
                     puts "You failed to select a weapon. Try again."
                     puts ""
                     list_all_weapons
@@ -48,6 +49,8 @@ class MainMenu
                     puts "Faith in a higher power will protect you. Faith required: #{selected_weapon.faith_req}"
                     sleep 1.2
                     puts ""
+                    puts "Press 1 to look at another #{selected_weapon.weapon_type} or 2 to select a new Weapon." 
+                    puts "You can also give up by pressing 'exit'"
                     new_weapon?(input)
                 end                               
         end
@@ -73,8 +76,19 @@ class MainMenu
     end
 
     def new_weapon?(input)
-        puts ""
-        puts 
+        input = gets.chomp
+        check_exit?(input)
+            if input.to_i == 1
+                puts ""
+                list_all_weapons
+                select_weapon(input)
+            elsif
+                input.to_i == 2
+                call
+            else
+                puts "That isn't a valid option."
+                new_weapon?(input)
+            end
     end
 
  

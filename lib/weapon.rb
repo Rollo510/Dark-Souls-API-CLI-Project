@@ -1,6 +1,6 @@
 class Weapon
 
-attr_accessor :id, :strength_req, :dex_req, :intelligence_req, :faith_req, :name
+attr_accessor :id, :strength_req, :dex_req, :intelligence_req, :faith_req, :name, :weapon_type
 
 @@all = []
 
@@ -21,8 +21,5 @@ end
 def self.all=(all)
     @@all = all
 end
-
-
-    
 
 end
