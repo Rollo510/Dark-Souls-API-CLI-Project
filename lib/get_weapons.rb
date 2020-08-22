@@ -2,7 +2,7 @@ class GetWeapons
 
     attr_accessor :url, :weapon_info, :name
 
-    URL = "https://mugenmonkey.com/api/v0/ds3_weapons?per_page=250"
+    URL = "https://mugenmonkey.com/api/v0/ds3_weapons?per_page=350"
 
     @@all = []
 
