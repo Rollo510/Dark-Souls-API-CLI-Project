@@ -1,6 +1,6 @@
 # To Do
-## Classes
 
+## For developmental purposes only
 
 - [x] DS3_Response -- Result of API search (count, weapon hash (ID for key and value for weapon), result array (array of ID results)
     - [ ] 

@@ -19,6 +19,7 @@ class MainMenu
             puts "Welcome to Dark Souls! Prepare to die..."
             puts "You'll need a weapon if you hope to survive: "
             puts "...Bow, Shield, Axe, Spear, Greatsword, Staff... and many more long forgotten..."
+            puts "Escape the nightmare at any time by typing 'exit'"
             puts "@xxxx[{::::::::::::::::::::::::::::::::::>"
             puts ""
     end
@@ -42,7 +43,7 @@ class MainMenu
                     puts "Will this be enough to survive? #{selected_weapon.name}"
                     puts "Your raw Strength will decimate their brittle bones. Strength required: #{selected_weapon.strength_req}"
                     sleep 1.2
-                    puts "Dexterity often out maneuvers brute force. Dexterity required: #{selected_weapon.dex_req}"
+                    puts "Dexterity often outmaneuvers brute force. Dexterity required: #{selected_weapon.dex_req}"
                     sleep 1.2
                     puts "What those monstrosities lack is Intelligence. Intelligence required: #{selected_weapon.intelligence_req}"
                     sleep 1.2
@@ -50,7 +51,6 @@ class MainMenu
                     sleep 1.2
                     puts ""
                     puts "Press 1 to look at another #{selected_weapon.weapon_type} or 2 to select a new Weapon." 
-                    puts "You can also give up by pressing 'exit'"
                     new_weapon?(input)
                 end                               
         end
